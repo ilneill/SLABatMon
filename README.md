@@ -17,7 +17,7 @@ You can see an explanation and demonstration here:
 
 WARNING: 12v SLA batteries are powerful current sources. Do not take chances, but take care instead!
 
-## Fritzing hardward schematic:
+## Fritzing hardware schematic:
 ![](SLABatMon_bb.png)
 
 ## LCD display in action:
