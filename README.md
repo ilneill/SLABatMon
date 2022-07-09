@@ -7,7 +7,7 @@ Here is the simple hardware I built and the Arduino code I wrote to test and mon
 
 Bad battery characteristics I have found:
 1. A 12v SLA car battery charger rejects it (fault light illuminated) and refuses to charge it.
-2. When "fully charged", the battery voltage is less than 12.5v - 13.5v. Mine bad battery was a little over 11v.
+2. When "fully charged", the battery voltage is less than 12.5v - 13.5v. My bad battery was a little over 11v when "fully charged".
 3. After charging it does not hold the charge for long under little or no load. In less than 1 week my bad battery was down to under 5v!
 
 My favourite part of the project was using the Arduino 3.3v supply as a reference voltage to calibrate the ADC measurements and voltage calculations.
