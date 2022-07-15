@@ -22,3 +22,16 @@ WARNING: 12v SLA batteries are powerful current sources. Do not take chances, bu
 
 ## LCD display in action:
 ![](WIN_20220704_19_37_20_Pro.jpg)
+
+# Update
+Some updates to my good and bad 12v SLA battery testing - battery discharge results and a code update.
+
+Conclusions: My bad 12v batteries is terrible, and the USB power bus is anything but stable and predictable.
+
+You can see these results discussed here:
+ - https://youtu.be/0IxHjZJqgB4
+
+WARNING: 12v SLA batteries are powerful current sources. Do not take chances, but take care instead!
+
+## Batteries 1 & 2 - Discharge from full:
+![](DischargeRates.png)
