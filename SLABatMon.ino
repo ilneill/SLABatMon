@@ -2,6 +2,8 @@
  * Sealed Lead Acid Battery Monitor.
  * Data shown on an I2C 20X4 LCD display and sent to the console for logging/graphing.
  * 
+ * 01.00.00 First Public release.
+ *  
  * (c) 2022 Ian Neill, arduino@binaria.co.uk
  * Licence: GPLv3
  * 
@@ -9,7 +11,7 @@
  * https://skillbank.co.uk/arduino/measure.htm
  */
 
-// Libraries
+// Libraries.
 #include <Wire.h>                           // The Arduino I2C library.
 #include <hd44780.h>                        // HD44780 via I2C LCD display library.
 #include <hd44780ioClass/hd44780_I2Cexp.h>  // I2C expander I/O class header.
@@ -35,7 +37,7 @@
 #define VDIVRATIO 3.0
 
 // ADC calibration and correction factor.
-float ADCFactor;
+float adcFactor;
 
 // I2C LCD display defines - 20 character X 4 line LCD display at address at 0x27.
 #define LCD_COLS 20
@@ -70,7 +72,7 @@ void setup() {
   // Send logging/graphing labels to the console.
   Serial.println("Battery-1,Battery-2,Battery-3,Battery-4");
   // Calculate the ADC Vref calibration and correction factor.
-  ADCFactor = (AVREF / getADCReading(AVRFVMON)) * VDIVRATIO;
+  adcFactor = (AVREF / getADCReading(AVRFVMON)) * VDIVRATIO;
 }
 
 void loop() {
@@ -90,10 +92,10 @@ void loop() {
   if (timeNow - timeMark1 >= JOB1CYCLE) {
     timeMark1 = timeNow;
     // Read the analog inputs and calculate the battery voltages.
-    myVoltsB1 = ADCFactor * getADCReading(BAT1VMON);
-    myVoltsB2 = ADCFactor * getADCReading(BAT2VMON);
-    myVoltsB3 = ADCFactor * getADCReading(BAT3VMON);
-    myVoltsB4 = ADCFactor * getADCReading(BAT4VMON);
+    myVoltsB1 = adcFactor * getADCReading(BAT1VMON);
+    myVoltsB2 = adcFactor * getADCReading(BAT2VMON);
+    myVoltsB3 = adcFactor * getADCReading(BAT3VMON);
+    myVoltsB4 = adcFactor * getADCReading(BAT4VMON);
     adcReadCounter += 1;
   }
   // Job 2 - Share the results: Send the data to the console and LCD.
