@@ -24,7 +24,7 @@ You can see an explanation and demonstration here:
 # Update 1
 Some updates to my good and bad 12v SLA battery testing - battery discharge results and a code update.
 
-Conclusions: My bad 12v batteries is terrible, and the USB power bus is anything but stable and predictable.
+Conclusions: My bad 12v battery is terrible (now it looks like a poor a 6v battery), and the USB power bus is anything but stable and predictable.
 
 You can see these results discussed here:
  - https://youtu.be/0IxHjZJqgB4
