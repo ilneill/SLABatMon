@@ -1,7 +1,7 @@
 # SLABatMon
 Testing and Monitoring some UPS 12v Sealed Lead Acid Batteries.
 
-Recently one of my home UPS's started complaining about it's battery. I have a number of UPS's, so this is not a new thing, as on average a UPS battery has about a 3yr life. Anyway, this got me thinking, how do I know these battries are bad and what makes a bad battery, bad?
+Recently one of my home UPS's started complaining about it's battery. I have a number of UPS's, so this is not a new thing, as on average a UPS battery has about a 3yr life. Anyway, this got me thinking, how do I know these batteries are bad and what makes a bad battery, bad?
 
 Here is the simple hardware I built and the Arduino code I wrote to test and monitor these batteries, and my findings so far.
 
@@ -10,12 +10,10 @@ Bad battery characteristics I have found:
 2. When "fully charged", the battery voltage is less than 12.5v - 13.5v. My bad battery was a little over 11v when "fully charged".
 3. After charging it does not hold the charge for long under little or no load. In less than 1 week my bad battery was down to under 5v!
 
-My favourite part of the project was using the Arduino 3.3v supply as a reference voltage to calibrate the ADC measurements and voltage calculations.
+My favourite part of the project was using the Arduino 3.3v supply as a reference voltage to calibrate the ADC measurements and voltage calculations. I also "discovered" the Fritzing... inexpensive and powerful software for documenting breadboard circuits.
 
 You can see an explanation and demonstration here:
  - https://youtu.be/aRnLHJlChSg
-
-WARNING: 12v SLA batteries are powerful current sources. Do not take chances, but take care instead!
 
 ## Fritzing hardware schematic:
 ![](SLABatMon_bb.png)
@@ -31,8 +29,6 @@ Conclusions: My bad 12v batteries is terrible, and the USB power bus is anything
 You can see these results discussed here:
  - https://youtu.be/0IxHjZJqgB4
 
-WARNING: 12v SLA batteries are powerful current sources. Do not take chances, but take care instead!
-
 ## Batteries 1 & 2 - Discharge from full:
 ![](DischargeRates.png)
 
@@ -46,7 +42,9 @@ Additionally, I have written a small python script that can be used to check the
 You can see this update discussed here:
  - https://youtu.be/Ctyt5gIIFC0
 
-WARNING: 12v SLA batteries are powerful current sources. Do not take chances, but take care instead!
-
 ## Serial console results with a CRC8:
 ![](Serial+CRC8.png)
+
+*********
+**WARNING: 12v SLA batteries are powerful current sources. Do not take chances, but take care instead!**
+*********
