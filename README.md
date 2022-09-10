@@ -23,7 +23,7 @@ WARNING: 12v SLA batteries are powerful current sources. Do not take chances, bu
 ## LCD display in action:
 ![](WIN_20220704_19_37_20_Pro.jpg)
 
-# Update
+# Update 1
 Some updates to my good and bad 12v SLA battery testing - battery discharge results and a code update.
 
 Conclusions: My bad 12v batteries is terrible, and the USB power bus is anything but stable and predictable.
@@ -35,3 +35,18 @@ WARNING: 12v SLA batteries are powerful current sources. Do not take chances, bu
 
 ## Batteries 1 & 2 - Discharge from full:
 ![](DischargeRates.png)
+
+# Update 2
+More updates to my good and bad 12v SLA battery testing - another code update.
+
+Added a watchdog timer, and a CRC8 checksum to the serial console data stream... because it seems like a good idea if logs are going to be captured for an extended period of time. I have also documented the basic ADC formulas used in the code.
+
+Additionally, I have written a small python script that can be used to check the CRC8 checksums in a text file of captured battery voltage data.
+
+You can see this update discussed here:
+ - https://youtu.be/Ctyt5gIIFC0
+
+WARNING: 12v SLA batteries are powerful current sources. Do not take chances, but take care instead!
+
+## Serial console results with a CRC8:
+![](Serial+CRC8.png)
